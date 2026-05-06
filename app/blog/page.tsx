@@ -1,5 +1,5 @@
 import InnerNav from "@/components/InnerNav";
-import { BlogFooter } from "@/components/Footer";
+import { PageBottom } from "@/components/Footer";
 
 const POSTS = [
   {
@@ -114,7 +114,7 @@ export default function BlogPage() {
         </section>
       </main>
 
-      <BlogFooter />
+      <PageBottom />
     </div>
   );
 }

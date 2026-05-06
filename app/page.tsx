@@ -196,18 +196,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-48 px-8 relative overflow-hidden bg-background" id="contact">
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-transparent" />
-          </div>
-          <div className="max-w-4xl mx-auto relative z-10 text-center">
-            <h2 className="font-headline text-5xl md:text-8xl font-bold tracking-tighter text-white mb-12">Ready to <span className="italic font-light">grow?</span></h2>
-            <button className="bg-primary-container text-on-primary-container px-14 py-7 font-headline font-bold text-sm tracking-[0.3em] uppercase primary-glow hover:scale-105 transition-all">
-              Initiate Consultation
-            </button>
-          </div>
-        </section>
       </main>
 
       <HomepageFooter />

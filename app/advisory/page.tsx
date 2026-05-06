@@ -1,5 +1,5 @@
 import InnerNav from "@/components/InnerNav";
-import { InnerFooter } from "@/components/Footer";
+import { PageBottom } from "@/components/Footer";
 import AdvisoryMaps from "@/components/AdvisoryMaps";
 
 const PROBLEM_CARDS = [
@@ -183,30 +183,9 @@ export default function AdvisoryPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-24 md:py-32 px-8 relative overflow-hidden text-center" id="contact">
-          <div className="max-w-4xl mx-auto relative z-10">
-            <h2 className="font-headline text-4xl md:text-7xl font-bold text-on-surface mb-10 md:mb-12 tracking-tighter leading-tight">
-              Ready to extend <span className="text-primary-container italic">your runway?</span>
-            </h2>
-            <button className="bg-primary-container text-on-primary-container px-10 md:px-12 py-4 md:py-5 font-headline font-bold text-base md:text-lg tracking-wide hover:brightness-110 hover:shadow-[0_0_30px_rgba(0,243,128,0.4)] transition-all active:scale-95">
-              Get In Touch
-            </button>
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/5 blur-[120px] rounded-full -z-10" />
-        </section>
-
-        {/* Legal */}
-        <section className="py-12 px-8 bg-background">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="font-body text-[11px] leading-relaxed text-white/40">
-              Jenta Consulting is an independent introduction and advisory services business. We do not hold an Australian Financial Services Licence and do not provide financial product advice. We operate solely as an introducer. We do not charge fees to businesses seeking funding or advisory introductions - our fees are paid exclusively by the advisory partners within our network. Once an introduction has been made, all due diligence, commercial negotiations and investment decisions are the sole responsibility of the parties involved. Jenta Consulting accepts no liability for the outcome of any introduction. Our recruitment and talent advisory services operate as a separate and independent business line, governed by separate terms of engagement.
-            </p>
-          </div>
-        </section>
       </main>
 
-      <InnerFooter />
+      <PageBottom />
     </div>
   );
 }

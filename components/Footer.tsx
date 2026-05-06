@@ -2,30 +2,30 @@ import Link from "next/link";
 
 const DISCLAIMER = `Jenta Consulting is an independent introduction and advisory services business. We do not hold an Australian Financial Services Licence and do not provide financial product advice. We operate solely as an introducer. We do not charge fees to businesses seeking funding or advisory introductions - our fees are paid exclusively by the advisory partners within our network. Once an introduction has been made, all due diligence, commercial negotiations and investment decisions are the sole responsibility of the parties involved. Jenta Consulting accepts no liability for the outcome of any introduction. Our recruitment and talent advisory services operate as a separate and independent business line, governed by separate terms of engagement.`;
 
-export function HomepageFooter() {
+const NAV_LINKS = [
+  { label: "About", href: "/team" },
+  { label: "What We Do", href: "/advisory" },
+  { label: "Sectors", href: "/#sectors" },
+  { label: "Articles", href: "/blog" },
+];
+
+function SharedFooter() {
   return (
     <footer className="bg-surface-container-lowest w-full border-t border-outline-variant/10 py-24">
       <div className="max-w-screen-2xl mx-auto px-12 flex flex-col items-center text-center">
         <span className="text-4xl font-bold tracking-tighter text-white font-headline mb-8">
           JENTA
         </span>
-        <div className="max-w-3xl mb-12">
-          <div className="space-y-6">
-            <p className="text-primary-container font-headline text-xs font-bold tracking-[0.3em] uppercase">
-              Disclaimer
-            </p>
-            <p className="text-on-surface text-[10px] md:text-[11px] leading-relaxed font-body opacity-70 text-center uppercase tracking-wider">
-              {DISCLAIMER}
-            </p>
-          </div>
+        <div className="max-w-3xl mb-12 space-y-6">
+          <p className="text-primary-container font-headline text-xs font-bold tracking-[0.3em] uppercase">
+            Disclaimer
+          </p>
+          <p className="text-on-surface text-[10px] md:text-[11px] leading-relaxed font-body opacity-70 text-center uppercase tracking-wider">
+            {DISCLAIMER}
+          </p>
         </div>
         <div className="flex flex-wrap justify-center gap-10 mb-16">
-          {[
-            { label: "About", href: "/team" },
-            { label: "What We Do", href: "/advisory" },
-            { label: "Sectors", href: "/#sectors" },
-            { label: "Articles", href: "/blog" },
-          ].map(({ label, href }) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <Link
               key={label}
               href={href}
@@ -40,16 +40,10 @@ export function HomepageFooter() {
             &copy; 2024 JENTA. ALL RIGHTS RESERVED.
           </span>
           <div className="flex gap-10">
-            <Link
-              href="#"
-              className="text-outline/40 hover:text-primary-container transition-colors font-label text-[10px] tracking-[0.3em] uppercase font-bold"
-            >
+            <Link href="#" className="text-outline/40 hover:text-primary-container transition-colors font-label text-[10px] tracking-[0.3em] uppercase font-bold">
               Privacy
             </Link>
-            <Link
-              href="#"
-              className="text-outline/40 hover:text-primary-container transition-colors font-label text-[10px] tracking-[0.3em] uppercase font-bold"
-            >
+            <Link href="#" className="text-outline/40 hover:text-primary-container transition-colors font-label text-[10px] tracking-[0.3em] uppercase font-bold">
               Terms
             </Link>
           </div>
@@ -59,61 +53,31 @@ export function HomepageFooter() {
   );
 }
 
-export function InnerFooter() {
+export function PageBottom() {
   return (
-    <footer className="bg-[#0F2A1E] border-t border-white/5 w-full flex flex-col md:flex-row justify-between items-center px-12 py-12 gap-6">
-      <div className="flex flex-col items-center md:items-start gap-2">
-        <div className="text-lg font-bold text-white font-display">JENTA</div>
-        <p className="text-white/50 font-label text-sm tracking-wide">
-          &copy; 2024 Jenta Consulting. All rights reserved.
-        </p>
-      </div>
-      <div className="flex gap-8">
-        <Link
-          href="#"
-          className="text-white/50 hover:text-white font-label text-sm tracking-wide transition-colors"
-        >
-          Privacy Protocol
-        </Link>
-        <Link
-          href="#"
-          className="text-white/50 hover:text-white font-label text-sm tracking-wide transition-colors"
-        >
-          Terms of Service
-        </Link>
-        <Link
-          href="#"
-          className="text-white/50 hover:text-white font-label text-sm tracking-wide transition-colors"
-        >
-          Regulatory Disclaimer
-        </Link>
-      </div>
-    </footer>
+    <>
+      {/* CTA */}
+      <section className="py-48 px-8 relative overflow-hidden bg-background" id="contact">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-transparent" />
+        </div>
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+          <h2 className="font-headline text-5xl md:text-8xl font-bold tracking-tighter text-white mb-12">
+            Ready to <span className="italic font-light">grow?</span>
+          </h2>
+          <button className="bg-primary-container text-on-primary-container px-14 py-7 font-headline font-bold text-sm tracking-[0.3em] uppercase primary-glow hover:scale-105 transition-all">
+            Initiate Consultation
+          </button>
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/5 blur-[120px] rounded-full -z-10" />
+      </section>
+
+      <SharedFooter />
+    </>
   );
 }
 
-export function BlogFooter() {
-  return (
-    <footer className="bg-zinc-950/50 w-full py-12 px-8 mt-auto border-t border-emerald-900/10">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-screen-2xl mx-auto">
-        <div className="text-2xl font-bold tracking-tighter text-white uppercase font-headline">
-          JENTA
-        </div>
-        <div className="flex flex-wrap justify-center gap-8 font-label text-xs uppercase tracking-widest">
-          {["Legal", "Privacy Policy", "Terms of Service", "Investment Disclosure"].map((item) => (
-            <Link
-              key={item}
-              href="#"
-              className="text-zinc-500 hover:text-emerald-200 hover:italic transition-all"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
-        <div className="text-zinc-500 font-label text-xs uppercase tracking-widest">
-          &copy; 2024 Jenta Consulting. Precision Intelligence.
-        </div>
-      </div>
-    </footer>
-  );
+// Keep HomepageFooter as alias for backwards compat
+export function HomepageFooter() {
+  return <PageBottom />;
 }

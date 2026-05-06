@@ -1,5 +1,5 @@
 import InnerNav from "@/components/InnerNav";
-import { InnerFooter } from "@/components/Footer";
+import { PageBottom } from "@/components/Footer";
 
 export default function TeamPage() {
   return (
@@ -42,7 +42,7 @@ export default function TeamPage() {
         </div>
       </main>
 
-      <InnerFooter />
+      <PageBottom />
     </div>
   );
 }
