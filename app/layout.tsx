@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JENTA | High-Stakes Intelligence",
+  title: "Jenta - Supporting Emerging Technology",
   description:
     "Through our network of private equity advisories, we make the introductions that open doors to new funding streams and markets.",
 };
