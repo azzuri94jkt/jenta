@@ -27,12 +27,16 @@ function FlipCard({ icon, title, back }: { icon: string; title: string; back: st
     <div className="flex-none w-[280px] lg:w-full h-[400px] snap-center" style={{ perspective: "1000px" }}>
       <div className="card-flip relative w-full h-full">
         <div className="card-flip-inner relative w-full h-full">
-          <div className="card-front absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center p-8 border border-primary/10 rounded-xl bg-surface-container-lowest">
-            <span className="material-symbols-outlined text-primary-container text-6xl mb-6">{icon}</span>
-            <h3 className="font-headline text-2xl font-bold text-white">{title}</h3>
+          <div className="card-front absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center p-4 border border-primary/10 rounded-xl bg-surface-container-lowest overflow-hidden">
+            <span className="material-symbols-outlined text-primary-container mb-3" style={{ fontSize: "8rem" }}>{icon}</span>
+            <h3 className="font-headline text-xl font-bold text-white">{title}</h3>
           </div>
           <div className="card-back absolute inset-0 w-full h-full flex items-center justify-center text-center p-8 border border-primary/20 rounded-xl bg-surface-container-high">
-            <p className="text-on-surface-variant text-sm leading-relaxed">{back}</p>
+            <div>
+              <span className="material-symbols-outlined text-primary-container mb-4 block" style={{ fontSize: "2.5rem" }}>{icon}</span>
+              <h3 className="font-headline text-xl font-bold text-white mb-4">{title}</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">{back}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -44,9 +48,13 @@ function FlipSection({ id, title, cards }: { id: string; title: string; cards: t
   return (
     <section className="py-24 bg-background relative">
       <div className="max-w-7xl mx-auto px-8 relative">
-        <h2 className="font-headline text-2xl md:text-3xl font-bold tracking-tighter text-white text-left mb-8">
+        <h2 className="font-headline text-2xl md:text-3xl font-bold tracking-tighter text-white text-left mb-4">
           THE <span className="text-primary-container italic">{title}</span>
         </h2>
+        <p className="lg:hidden text-on-surface-variant/50 text-xs font-label uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+          Tap & scroll right
+          <span className="material-symbols-outlined text-sm">arrow_forward</span>
+        </p>
         <div className="relative">
           <div className="carousel-container flex lg:grid lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory gap-6 px-4 py-8" id={id}>
             {cards.map((card) => (

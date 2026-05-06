@@ -114,19 +114,23 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative mb-32">
+              <p className="lg:hidden text-on-surface-variant/50 text-xs font-label uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                Tap & scroll right
+                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              </p>
               <div className="carousel-container flex lg:grid lg:grid-cols-5 overflow-x-auto snap-x snap-mandatory gap-4 px-1 py-4">
                 {SECTORS.map(({ icon, label, desc }) => (
                   <div key={label} className="flex-none w-[280px] lg:w-full h-[400px] snap-center" style={{ perspective: "1000px" }}>
                     <div className="card-flip relative w-full h-full">
                       <div className="card-flip-inner relative w-full h-full">
-                        <div className="card-front absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center p-8 border border-primary/10 rounded-xl bg-surface-container-lowest">
-                          <span className="material-symbols-outlined text-8xl text-primary-container mb-6">{icon}</span>
-                          <h4 className="font-headline text-lg font-bold text-white uppercase tracking-widest text-center mt-4">{label}</h4>
+                        <div className="card-front absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center p-4 border border-primary/10 rounded-xl bg-surface-container-lowest overflow-hidden">
+                          <span className="material-symbols-outlined text-primary-container mb-3" style={{ fontSize: "8rem" }}>{icon}</span>
+                          <h4 className="font-headline text-base font-bold text-white uppercase tracking-widest text-center">{label}</h4>
                         </div>
                         <div className="card-back absolute inset-0 w-full h-full flex items-center justify-center text-center p-8 border border-primary/20 rounded-xl bg-surface-container-high">
                           <div>
-                            <span className="material-symbols-outlined text-4xl text-primary-container mb-4 block">{icon}</span>
-                            <h4 className="font-headline text-lg font-bold text-white uppercase tracking-widest mb-4">{label}</h4>
+                            <span className="material-symbols-outlined text-primary-container mb-4 block" style={{ fontSize: "2.5rem" }}>{icon}</span>
+                            <h4 className="font-headline text-base font-bold text-white uppercase tracking-widest mb-4">{label}</h4>
                             <p className="text-on-surface-variant text-sm leading-relaxed">{desc}</p>
                           </div>
                         </div>
