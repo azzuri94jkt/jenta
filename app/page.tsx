@@ -75,7 +75,7 @@ export default function HomePage() {
                 <h2 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
                   Runway for <span className="italic text-primary-container font-light">emerging technologies.</span>
                 </h2>
-                <p className="text-white text-lg">Add to your runway with new funding streams and markets, whilst optimising your runway with the key hires.</p>
+                <p className="text-white text-lg">Add to your runway with new funding streams and markets.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-8">
