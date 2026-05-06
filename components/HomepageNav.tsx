@@ -37,7 +37,6 @@ export default function HomepageNav() {
         </button>
         <div className="flex flex-col gap-10 text-center">
           {[
-            { label: "About", href: "/team" },
             { label: "What We Do", href: "/advisory" },
             { label: "Sectors", href: "/#sectors" },
             { label: "Articles", href: "/blog" },
@@ -81,7 +80,6 @@ export default function HomepageNav() {
           {/* Desktop Links */}
           <div className="hidden md:flex items-center justify-center gap-12">
             {[
-              { label: "About", href: "/team" },
               { label: "What We Do", href: "/advisory" },
               { label: "Sectors", href: "/#sectors" },
               { label: "Articles", href: "/blog" },

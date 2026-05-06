@@ -1,6 +1,8 @@
 import Link from "next/link";
 import HomepageNav from "@/components/HomepageNav";
 import { HomepageFooter } from "@/components/Footer";
+import AdvisoryMaps from "@/components/AdvisoryMaps";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const SECTORS = [
   { icon: "psychology", label: "AI & Robotics", desc: "Backing intelligent systems, from autonomous platforms to machine learning infrastructure." },
@@ -10,12 +12,6 @@ const SECTORS = [
   { icon: "medical_services", label: "MedTech", desc: "Next-generation medical platforms built for distribution and scale." },
 ];
 
-const MARKETS = [
-  { emoji: "🇮🇩", label: "South East Asia" },
-  { emoji: "🇦🇺", label: "Australia" },
-  { emoji: "🇰🇼", label: "Gulf States" },
-  { emoji: "🇪🇺", label: "European Union" },
-];
 
 const PIPELINE = [
   { tag: "Market Entry", title: "MedTech AI", desc: "AI MedTech Platform Distribution across South East Asia", icon: "medical_services" },
@@ -32,6 +28,7 @@ const BLOG_POSTS = [
 export default function HomePage() {
   return (
     <>
+      <ScrollToTop />
       <HomepageNav />
       <main>
         {/* Hero */}
@@ -146,14 +143,7 @@ export default function HomePage() {
                 <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-white mb-4">Market Entry</h2>
                 <p className="text-white/80 max-w-2xl italic font-light">Markets our advisories can help your product access</p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {MARKETS.map(({ emoji, label }) => (
-                  <div key={label} className="bg-surface border border-outline-variant/10 p-10 flex flex-col items-center text-center group hover:bg-[#0F2A1E]/20 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(0,243,128,0.15)] transition-all duration-300">
-                    <div className="text-5xl mb-6">{emoji}</div>
-                    <span className="font-headline text-lg font-bold text-white tracking-wide uppercase">{label}</span>
-                  </div>
-                ))}
-              </div>
+              <AdvisoryMaps />
             </div>
           </div>
         </section>
