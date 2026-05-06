@@ -37,8 +37,8 @@ export default function HomePage() {
             <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
               <source src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1777859961/13070859_2580_1440_30fps_ilwjs7.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0F2A1E]/40 via-[#121412]/60 to-background" />
+            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0F2A1E]/20 via-[#121412]/40 to-background" />
           </div>
           <div className="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8 pt-32 md:pt-0">
