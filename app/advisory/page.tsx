@@ -74,23 +74,42 @@ export default function AdvisoryPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-          <div className="absolute inset-0 -z-20">
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-              <source src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1775733399/15224037_1920_1080_60fps_1_kig5ag.mp4" type="video/mp4" />
+          {/* Video layer */}
+          <div className="absolute inset-0 z-0">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source
+                src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1775733399/15224037_1920_1080_60fps_1_kig5ag.mp4"
+                type="video/mp4"
+              />
             </video>
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/55" />
+            {/* Gradient fade to page bg at bottom */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
           </div>
-          <div className="absolute inset-0 bg-black/50 -z-10" />
-          <div className="relative z-10 pt-32 md:pt-48 pb-12 px-8">
+
+          {/* Headline */}
+          <div className="relative z-10 pt-32 md:pt-48 pb-8 px-8">
             <div className="max-w-7xl mx-auto text-center">
               <h1 className="font-headline text-4xl md:text-7xl font-bold tracking-tighter text-white max-w-5xl mx-auto leading-[1.1] text-glow">
-                Access New <span className="text-primary-container italic">Funding Streams & Markets.</span>
+                Access New{" "}
+                <span className="text-primary-container italic">
+                  Funding Streams & Markets.
+                </span>
               </h1>
-              <p className="mt-8 md:mt-10 font-body text-base md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
+              <p className="mt-8 md:mt-10 font-body text-base md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 We connect growth-stage businesses with the right advisory partners to unlock new markets and strategic investment.
               </p>
             </div>
           </div>
-          {/* How It Works */}
+
+          {/* How It Works cards — sit inside the video section */}
           <div className="relative z-10 py-12 md:py-16 px-6 md:px-8">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
@@ -99,9 +118,16 @@ export default function AdvisoryPage() {
                   { n: "02", title: "We make the right introduction.", body: "We introduce you to the advisory partner within our network best placed to support your raise or market entry. We do not charge you for this. Our fee is paid by the advisory." },
                   { n: "03", title: "The advisory takes it from here.", body: "Once introduced, the advisory and your business conduct all due diligence, negotiations and commercial arrangements independently. Jenta steps back." },
                 ].map(({ n, title, body }) => (
-                  <div key={n} className="bg-surface-container/60 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/10 relative overflow-hidden group hover:bg-surface-container-high/80 hover:-translate-y-2 transition-all duration-300">
-                    <span className="font-headline text-4xl md:text-5xl font-bold text-primary-container/20 absolute -right-4 -top-4 select-none">{n}</span>
-                    <h3 className="font-headline text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 pr-8">{title}</h3>
+                  <div
+                    key={n}
+                    className="bg-surface-container/60 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/10 relative overflow-hidden group hover:bg-surface-container-high/80 hover:-translate-y-2 transition-all duration-300"
+                  >
+                    <span className="font-headline text-4xl md:text-5xl font-bold text-primary-container/20 absolute -right-4 -top-4 select-none">
+                      {n}
+                    </span>
+                    <h3 className="font-headline text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 pr-8">
+                      {title}
+                    </h3>
                     <p className="text-white/90 leading-relaxed text-sm md:text-base">{body}</p>
                   </div>
                 ))}
