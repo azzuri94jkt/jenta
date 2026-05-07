@@ -15,9 +15,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jentaconsulting.com"),
   title: "Jenta - Supporting Emerging Technology",
   description:
     "Through our network of private equity advisories, we make the introductions that open doors to new funding streams and markets.",
+  openGraph: {
+    title: "Jenta - Supporting Emerging Technology",
+    description:
+      "Through our network of private equity advisories, we make the introductions that open doors to new funding streams and markets.",
+    url: "https://jentaconsulting.com",
+    siteName: "Jenta",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jenta - Supporting Emerging Technology",
+    description:
+      "Through our network of private equity advisories, we make the introductions that open doors to new funding streams and markets.",
+  },
 };
 
 export default function RootLayout({
