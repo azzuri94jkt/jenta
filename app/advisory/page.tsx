@@ -84,7 +84,7 @@ export default function AdvisoryPage() {
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source
-                src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1775733399/15224037_1920_1080_60fps_1_kig5ag.mp4"
+                src="https://res.cloudinary.com/dp7duapaz/video/upload/q_90/f_auto/v1775733399/15224037_1920_1080_60fps_1_kig5ag.mp4"
                 type="video/mp4"
               />
             </video>
