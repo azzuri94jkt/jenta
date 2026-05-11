@@ -7,8 +7,8 @@ import { POSTS } from "@/app/blog/page";
 
 const SECTORS = [
   { icon: "psychology", label: "AI & Robotics", desc: "Backing intelligent systems, from autonomous platforms to machine learning infrastructure." },
-  { icon: "shield", label: "Defence", desc: "Strategic capital and partnerships for growth-stage defence and aerospace businesses." },
-  { icon: "eco", label: "Green Energy", desc: "Connecting capital to cleaner, smarter energy systems." },
+  { icon: "shield", label: "Defence", desc: "Discovering bleeding-edge hardware and software companies pushing the boundaries of what's possible to protect societies." },
+  { icon: "eco", label: "Green Energy", desc: "Innovation pushing the boundaries behind smarter energy systems." },
   { icon: "agriculture", label: "AgriTech", desc: "Backing the technology transforming how the world grows and distributes food." },
   { icon: "medical_services", label: "MedTech", desc: "Next-generation medical platforms built for distribution and scale." },
 ];
