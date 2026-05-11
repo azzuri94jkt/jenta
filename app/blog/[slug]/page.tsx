@@ -8,6 +8,37 @@ export function generateStaticParams() {
 }
 
 const ARTICLES: Record<string, React.ReactNode> = {
+  "retail-brand-50m-arr-no-ai-engineer": (
+    <div className="space-y-8 text-white/80 text-lg leading-relaxed font-body">
+      <p>
+        During my time working in eCommerce, the biggest topic of conversation was &lsquo;Unified Commerce&rsquo;, a term I heard frequently through the Shopify sphere.
+      </p>
+      <p>
+        Fragmentation was and is no longer an option. I often saw large scale brands hire multiple eComm coordinators whose primary job really was to make sure orders were syncing between online, retail and their ERP or OMS. Let&apos;s be real, whoever had to do that endured what was probably a rather mind-numbing job.
+      </p>
+      <p>
+        Then came the revolution of API order syncing and routing, meaning that an eComm coordinator&apos;s job was just to deal with any red flags, an order that couldn&apos;t be synced due to bad data or a duplication.
+      </p>
+      <p>
+        Then came AI. AI can now sit in the integration layer and remove basic blockers, amend orders and customer data as it flows through, whilst segmenting customers ready for marketing tools.
+      </p>
+      <p>
+        Though still reactive. Not many brands are looking into this layer and thinking about proactive AI systems, and this comes down to system readiness and hiring (no legit, not just because I am a recruiter).
+      </p>
+      <p>
+        I have researched the living hell out of SMB and enterprise Aussie eComm brands in particular, trying to understand who owns AI tooling or agent orchestration. It&apos;s really not a thing, or at least not yet. Whereas SaaS and startups are hiring AI engineers and product engineers en masse (with lower profit margins), many eComm brands just aren&apos;t. In fact, many still view eComm and retail as a separate function that often competes with itself.
+      </p>
+      <p>
+        I believe this is a massive opportunity cost and we could be only 12&ndash;18 months away from the first dedicated AI hires within eComm brands. If you are an eCommerce and retail business clocking $50M++ ARR, you need to be thinking about an AI engineer in your team.
+      </p>
+      <p>
+        The upside is significant. The amount of data flowing through backend systems, in-store and online means a brand could be refining and automating on the go. Think iterating on customer segments, building custom landing pages for those segments, running automated cross-channel marketing campaigns, or powering live in-store recommendations through a chatbot that helps your sales reps in the moment. The list goes on. Seriously, I am not technical and I could think of another 10 things a brand could automate.
+      </p>
+      <p>
+        I hope I don&apos;t sound too controversial when I say this. If you are clocking the numbers mentioned above and you aren&apos;t thinking about who is heading up your AI practice in-house, you could be playing catchup in 12&ndash;24 months.
+      </p>
+    </div>
+  ),
   "embrace-the-age-of-experimentation": (
     <div className="space-y-8 text-white/80 text-lg leading-relaxed font-body">
       <p>

@@ -11,6 +11,15 @@ export const POSTS = [
     readTime: "6 min read",
     img: "REPLACE_WITH_CLOUDINARY_URL",
   },
+  {
+    slug: "retail-brand-50m-arr-no-ai-engineer",
+    title: "Retail Brand with $50M ARR and No AI Engineer. That Could Be a Problem pretty soon.",
+    excerpt: "During my time working in eCommerce, the biggest topic of conversation was 'Unified Commerce'. Not many brands are thinking about proactive AI systems — and that window is closing.",
+    tag: "eCommerce",
+    date: "May 2026",
+    readTime: "3 min read",
+    img: "REPLACE_WITH_CLOUDINARY_URL",
+  },
 ];
 
 export default function BlogPage() {
@@ -24,7 +33,9 @@ export default function BlogPage() {
           <a href="/" className="text-emerald-200 hover:text-emerald-100 transition-all duration-300">
             <span className="material-symbols-outlined">arrow_back</span>
           </a>
-          <div className="text-2xl font-bold tracking-tighter uppercase text-white">JENTA</div>
+          <Link href="/" className="text-2xl font-bold tracking-tighter uppercase text-white hover:text-primary-container transition-colors">
+            JENTA
+          </Link>
           <button className="bg-primary-container text-on-primary-container px-6 py-2 font-bold tracking-tight hover:brightness-110 transition-all active:scale-95">
             Get In Touch
           </button>
@@ -37,8 +48,8 @@ export default function BlogPage() {
           <h1 className="font-display text-7xl md:text-9xl font-bold tracking-tighter text-tertiary mb-6">
             Our <span className="italic text-primary-container">Blog.</span>
           </h1>
-          <p className="max-w-2xl text-on-surface-variant font-light text-lg md:text-xl leading-relaxed uppercase tracking-widest">
-            Deep-dive analysis into the intersection of technology, capital, and geopolitical shifts.
+          <p className="max-w-2xl text-on-surface-variant font-light text-lg md:text-xl leading-relaxed">
+            Read some of the thoughts &amp; opinions from some of our team. Expect a culmination of ideas coming from real industry experience.
           </p>
         </section>
 
@@ -60,7 +71,7 @@ export default function BlogPage() {
               </div>
               <div className="p-8 md:p-16 flex flex-col justify-center relative z-10">
                 <div className="font-label text-xs uppercase tracking-[0.2em] text-primary-container mb-4 font-bold">
-                  Featured Analysis
+                  Featured Work
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold text-tertiary leading-tight mb-6">
                   {featured.title}
@@ -76,7 +87,7 @@ export default function BlogPage() {
                   <span className="text-primary">{featured.tag}</span>
                 </div>
                 <div className="flex items-center gap-2 text-primary font-bold italic group/btn">
-                  Read Intelligence Report
+                  Read our thoughts here
                   <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                 </div>
               </div>
@@ -88,9 +99,9 @@ export default function BlogPage() {
         {rest.length > 0 && (
           <section className="px-6 max-w-screen-2xl mx-auto">
             <div className="flex items-end justify-between mb-12">
-              <h3 className="font-display text-3xl font-bold text-tertiary">Latest <span className="italic font-light">Insights</span></h3>
+              <h3 className="font-display text-3xl font-bold text-tertiary">Latest <span className="italic font-light">Thoughts</span></h3>
               <div className="h-px flex-1 mx-8 bg-outline-variant opacity-20 hidden md:block" />
-              <span className="font-label text-xs uppercase tracking-widest text-outline">Laboratory Archive / 2026</span>
+              <span className="font-label text-xs uppercase tracking-widest text-outline">Archive / 2026</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {rest.map(({ slug, title, excerpt, tag, img }) => (
