@@ -66,7 +66,7 @@ export function PageBottom() {
             Ready to <span className="italic font-light">grow?</span>
           </h2>
           <button className="bg-primary-container text-on-primary-container px-14 py-7 font-headline font-bold text-sm tracking-[0.3em] uppercase primary-glow hover:scale-105 transition-all">
-            Initiate Consultation
+            Book a discovery call
           </button>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/5 blur-[120px] rounded-full -z-10" />

@@ -1,43 +1,125 @@
+"use client";
+
 import InnerNav from "@/components/InnerNav";
 import { PageBottom } from "@/components/Footer";
+import { useRef } from "react";
+
+const TEAM = [
+  {
+    name: "Sami Wareeth",
+    role: "Founder",
+    img: "REPLACE_WITH_CLOUDINARY_URL",
+    bio: [
+      "I have spent the last eight-plus years as a technical recruiter, placing critical roles into SaaS, hardware and emerging tech businesses across every stage of funding, from pre-seed through to Series D. Most recently I worked internally with leading eCommerce agency DotCollective, where I grew the team out by 40-plus hires and designed the talent engine alongside their HR processes.",
+      "I take the responsibility seriously, because the people you bring in either stretch or compress your runway. Outside of recruitment, I am deeply interconnected in the Australian scaleup ecosystem and I genuinely enjoy helping businesses grow, whether that be through hiring or through funding.",
+    ],
+    extra: {
+      heading: "Why I built Jenta",
+      body: "I speak to a lot of founders, and a familiar pattern kept emerging. Many were not yet ready to hire because they were mid-raise. Previously I would close the conversation and circle back once the round had landed. However I wanted to add more value, so I started building out a network of capital advisories to bring into these conversations earlier. The result has been a stronger relationship with the founder and a more holistic view for everyone involved. Advisories now lean on me to understand how a team is comprised and where it needs strengthening, which gives investors a clearer picture of the business. After all, a business is nothing without its people, and capital and talent are two sides of the same growth coin.",
+    },
+  },
+  {
+    name: "Team Member",
+    role: "Coming Soon",
+    img: "",
+    bio: ["More team members coming soon."],
+    extra: null,
+  },
+  {
+    name: "Team Member",
+    role: "Coming Soon",
+    img: "",
+    bio: ["More team members coming soon."],
+    extra: null,
+  },
+];
 
 export default function TeamPage() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir === "right" ? 600 : -600, behavior: "smooth" });
+  };
+
   return (
     <div className="bg-[#0F2A1E] text-white font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
       <InnerNav />
 
-      <main className="min-h-screen pt-40 pb-24 px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24 flex-1">
-        {/* Left: Silhouette */}
-        <div className="w-full md:w-1/2 flex justify-center items-center relative group">
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#c1ffcb]/5 to-transparent rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity" />
-          <div className="relative w-full aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden ghost-border glow-ambient flex items-end justify-center">
-            <img
-              className="w-full h-full object-cover mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity duration-700"
-              alt="Sami Wareeth - Founder of Jenta"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7rf9GtFBU2SEF5nHVUbM0-sEK5OPK9pY46TsshPu5gqMp-hJ19N4lg0DFVEqGbM44ohnGAriw2Cai0f462UfNGSF6cdu7N-uqe-AWAfzlAOP4Ck_eDnQ7nd9iX7uQ0z7dRrL9YntYf8JfoOS4x5bibLgCxi1QSdvLnKswbVdXClJDZQ6nQSsdzR6qa51-ScldHBVu1px9uj66PEY6rZDrHf0fO7-rJM5hkP0md0FDYqyV1cYixtTYQYzAGD4C5glrYIVS-n7RacQp"
-            />
-          </div>
+      <main className="pt-32 pb-24 flex-1">
+        {/* Heading */}
+        <div className="px-8 max-w-7xl mx-auto mb-16">
+          <div className="text-primary-container font-display uppercase tracking-[0.2em] text-sm mb-4">Leadership</div>
+          <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
+            Meet the <span className="italic font-light">Team.</span>
+          </h1>
         </div>
 
-        {/* Right: Content */}
-        <div className="w-full md:w-1/2 space-y-8">
-          <header>
-            <div className="text-primary-container font-display uppercase tracking-[0.2em] text-sm mb-4">Leadership</div>
-            <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter text-white leading-[1.1]">
-              Our Founder, <br />
-              <span className="italic font-light">Sami Wareeth</span>
-            </h1>
-          </header>
-          <div className="space-y-6 text-white/80 leading-relaxed text-lg max-w-xl">
-            <p>
-              Sami Wareeth founded Jenta with a singular vision: to bridge the gap between speculative investment and clinical intelligence. With over two decades of navigating high-stakes global markets, Sami has developed a proprietary methodology that prioritizes structural resilience over short-term volatility.
-            </p>
-            <p>
-              Under his direction, the consultancy operates as a digital laboratory where strategies are not merely proposed but synthesized through rigorous stress testing and geopolitical analysis. His approach combines the ruthless precision of technical data with an intuitive grasp of the human elements that drive market shifts.
-            </p>
-            <p>
-              Today, Jenta serves as the primary sovereign alchemist for a select circle of global institutions, transforming complex market signals into actionable, high-velocity intelligence that secures generational prosperity.
-            </p>
+        {/* Carousel */}
+        <div className="relative px-8 max-w-7xl mx-auto">
+          {/* Scroll buttons */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-surface-container-low border border-white/10 items-center justify-center text-white hover:bg-primary-container hover:text-on-primary-container transition-all"
+            aria-label="Previous"
+          >
+            <span className="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-surface-container-low border border-white/10 items-center justify-center text-white hover:bg-primary-container hover:text-on-primary-container transition-all"
+            aria-label="Next"
+          >
+            <span className="material-symbols-outlined">chevron_right</span>
+          </button>
+
+          <p className="md:hidden text-on-surface-variant/50 text-xs font-label uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+            Swipe to explore
+            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+          </p>
+
+          <div
+            ref={scrollRef}
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 carousel-container"
+          >
+            {TEAM.map((member, i) => (
+              <div
+                key={i}
+                className="flex-none w-[85vw] md:w-[560px] snap-center bg-surface-container-low border border-white/5 rounded-xl overflow-hidden"
+              >
+                {/* Photo */}
+                <div className="w-full aspect-[4/3] bg-surface-container overflow-hidden">
+                  {member.img && !member.img.startsWith("REPLACE") ? (
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[#0F2A1E] to-[#1a3d2b] flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary-container/30" style={{ fontSize: "6rem" }}>person</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="p-8 md:p-10">
+                  <div className="text-primary-container font-label text-xs uppercase tracking-[0.2em] mb-2">{member.role}</div>
+                  <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-6">{member.name}</h2>
+
+                  <div className="space-y-4 text-white/75 text-sm leading-relaxed">
+                    {member.bio.map((p, j) => <p key={j}>{p}</p>)}
+                  </div>
+
+                  {member.extra && (
+                    <div className="mt-8 pt-8 border-t border-white/10">
+                      <h3 className="font-display text-lg font-bold text-primary-container mb-4 italic">{member.extra.heading}</h3>
+                      <p className="text-white/75 text-sm leading-relaxed">{member.extra.body}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </main>
