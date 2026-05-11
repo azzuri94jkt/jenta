@@ -3,6 +3,7 @@ import HomepageNav from "@/components/HomepageNav";
 import { HomepageFooter } from "@/components/Footer";
 import AdvisoryMaps from "@/components/AdvisoryMaps";
 import ScrollToTop from "@/components/ScrollToTop";
+import { POSTS } from "@/app/blog/page";
 
 const SECTORS = [
   { icon: "psychology", label: "AI & Robotics", desc: "Backing intelligent systems, from autonomous platforms to machine learning infrastructure." },
@@ -19,9 +20,7 @@ const PIPELINE = [
   { tag: "Series A Capital Raise", title: "Green Energy", desc: "Green Energy AI Data Centre actively raising for their Series A", icon: "eco" },
 ];
 
-const BLOG_POSTS = [
-  { date: "MAY 2026", title: "Embrace the age of experimentation", excerpt: "4 ways engineering teams are adopting a new look in 2026.", href: "/blog/embrace-the-age-of-experimentation" },
-];
+const BLOG_POSTS = POSTS.slice(0, 4);
 
 export default function HomePage() {
   return (
@@ -179,8 +178,8 @@ export default function HomePage() {
               <p className="text-white/80 mb-12 font-light">Deep-dive analysis into the intersection of technology, capital, and geopolitical shifts.</p>
             </div>
             <div className="lg:w-2/3 space-y-12">
-              {BLOG_POSTS.map(({ date, title, excerpt, href }) => (
-                <Link key={title} href={href} className="group flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/10 hover:border-primary-container transition-colors">
+              {BLOG_POSTS.map(({ date, title, excerpt, slug }) => (
+                <Link key={slug} href={`/blog/${slug}`} className="group flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/10 hover:border-primary-container transition-colors">
                   <div className="md:w-1/4">
                     <p className="font-label text-outline text-[10px] tracking-widest uppercase font-bold">{date}</p>
                   </div>
