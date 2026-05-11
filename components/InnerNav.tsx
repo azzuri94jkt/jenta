@@ -24,7 +24,7 @@ export default function InnerNav() {
         </div>
 
         <Link
-          href="#contact"
+          href="/contact"
           className="relative bg-primary-container text-on-primary-container px-3 md:px-6 py-1.5 md:py-2 font-headline font-bold text-[10px] md:text-sm tracking-wide transition-all active:scale-95 hover:brightness-110 shadow-lg order-3"
         >
           Get In Touch

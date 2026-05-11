@@ -36,9 +36,9 @@ export default function BlogPage() {
           <Link href="/" className="text-2xl font-bold tracking-tighter uppercase text-white hover:text-primary-container transition-colors">
             JENTA
           </Link>
-          <button className="bg-primary-container text-on-primary-container px-6 py-2 font-bold tracking-tight hover:brightness-110 transition-all active:scale-95">
+          <Link href="/contact" className="bg-primary-container text-on-primary-container px-6 py-2 font-bold tracking-tight hover:brightness-110 transition-all active:scale-95">
             Get In Touch
-          </button>
+          </Link>
         </div>
       </nav>
 
