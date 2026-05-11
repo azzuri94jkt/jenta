@@ -43,12 +43,12 @@ export default function HomePage() {
                 Seeing <span className="italic font-light text-primary-container">Around</span> Corners.
               </h1>
               <p className="max-w-xl text-lg md:text-xl font-light leading-relaxed mb-10 text-white">
-                Through our network of private equity advisories, we make the introductions that open doors to new funding streams and markets.
+                Through our network of capital advisories, we make the introductions that open doors to new funding streams and markets.
               </p>
             </div>
           </div>
           {/* Marquee Ticker */}
-          <div className="absolute bottom-0 w-full bg-surface-container-low/50 backdrop-blur-sm py-10 border-y border-outline-variant/10 overflow-hidden">
+          <div className="absolute bottom-0 w-full py-10 overflow-hidden">
             <div className="flex whitespace-nowrap gap-12 items-center animate-marquee">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="flex gap-20 items-center px-4">
