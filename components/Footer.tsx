@@ -3,7 +3,7 @@ import Link from "next/link";
 const DISCLAIMER = `Jenta Consulting is an independent introduction and advisory services business. We do not hold an Australian Financial Services Licence and do not provide financial product advice. We operate solely as an introducer. We do not charge fees to businesses seeking funding or advisory introductions - our fees are paid exclusively by the advisory partners within our network. Once an introduction has been made, all due diligence, commercial negotiations and investment decisions are the sole responsibility of the parties involved. Jenta Consulting accepts no liability for the outcome of any introduction. Our recruitment and talent advisory services operate as a separate and independent business line, governed by separate terms of engagement.`;
 
 const NAV_LINKS = [
-  { label: "About", href: "/team" },
+  { label: "Our Team", href: "/team" },
   { label: "What We Do", href: "/advisory" },
   { label: "Sectors", href: "/#sectors" },
   { label: "Articles", href: "/blog" },
