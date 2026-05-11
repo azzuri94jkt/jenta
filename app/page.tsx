@@ -20,9 +20,7 @@ const PIPELINE = [
 ];
 
 const BLOG_POSTS = [
-  { date: "JAN 14, 2024", title: "The Death of Conventional Hedge", excerpt: "How quantum computing is rendering traditional portfolio diversification obsolete in the new sovereign era." },
-  { date: "DEC 08, 2023", title: "Sovereign Data: The New Gold Reserve", excerpt: "Analyzing the shift from oil-based economies to intelligence-based governance models in the Asia-Pacific region." },
-  { date: "NOV 22, 2023", title: "AI In the War Room: Capital Tactics", excerpt: "The role of predictive neural networks in high-stakes venture capital and acquisition strategy." },
+  { date: "MAY 2026", title: "Embrace the age of experimentation", excerpt: "4 ways engineering teams are adopting a new look in 2026.", href: "/blog/embrace-the-age-of-experimentation" },
 ];
 
 export default function HomePage() {
@@ -181,8 +179,8 @@ export default function HomePage() {
               <p className="text-white/80 mb-12 font-light">Deep-dive analysis into the intersection of technology, capital, and geopolitical shifts.</p>
             </div>
             <div className="lg:w-2/3 space-y-12">
-              {BLOG_POSTS.map(({ date, title, excerpt }) => (
-                <Link key={title} href="/blog" className="group flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/10 hover:border-primary-container transition-colors">
+              {BLOG_POSTS.map(({ date, title, excerpt, href }) => (
+                <Link key={title} href={href} className="group flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/10 hover:border-primary-container transition-colors">
                   <div className="md:w-1/4">
                     <p className="font-label text-outline text-[10px] tracking-widest uppercase font-bold">{date}</p>
                   </div>
