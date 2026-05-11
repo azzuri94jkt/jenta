@@ -81,6 +81,7 @@ export default function AdvisoryPage() {
               loop
               muted
               playsInline
+              poster="https://res.cloudinary.com/dp7duapaz/video/upload/so_0,q_80,w_1920/v1777869537/13070184_3840_2160_60fps_sozzx5.jpg"
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source
