@@ -43,7 +43,7 @@ export default function TeamPage() {
   };
 
   return (
-    <div className="font-body min-h-screen flex flex-col" style={{ background: "#f0f4f1" }}>
+    <div className="text-white font-body min-h-screen flex flex-col">
       {/* Video background */}
       <div className="fixed inset-0 z-0">
         <video
@@ -54,12 +54,12 @@ export default function TeamPage() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
-            src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1778628220/10650639-hd_1920_1080_30fps_jke6mx.mp4"
+            src="https://res.cloudinary.com/dp7duapaz/video/upload/q_auto/f_auto/v1778628605/14577738_1920_1080_60fps_iawkb2.mp4"
             type="video/mp4"
           />
         </video>
-        {/* Soft light overlay so text stays readable */}
-        <div className="absolute inset-0 bg-white/50" />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
       <div className="relative z-10 flex flex-col flex-1">
@@ -68,31 +68,30 @@ export default function TeamPage() {
         <main className="pt-32 pb-24 flex-1">
           {/* Heading */}
           <div className="px-8 max-w-7xl mx-auto mb-16">
-            <div className="text-[#0F2A1E] font-display uppercase tracking-[0.2em] text-sm mb-4 font-bold opacity-70">Leadership</div>
-            <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter text-[#0F2A1E] leading-[1.1]">
+            <div className="text-primary-container font-display uppercase tracking-[0.2em] text-sm mb-4 font-bold">Leadership</div>
+            <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1]">
               Meet the <span className="italic font-light">Team.</span>
             </h1>
           </div>
 
           {/* Carousel */}
           <div className="relative px-8 max-w-7xl mx-auto">
-            {/* Scroll buttons */}
             <button
               onClick={() => scroll("left")}
-              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/80 border border-[#0F2A1E]/10 items-center justify-center text-[#0F2A1E] hover:bg-[#0F2A1E] hover:text-white transition-all shadow-md"
+              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-surface-container-low border border-white/10 items-center justify-center text-white hover:bg-primary-container hover:text-on-primary-container transition-all"
               aria-label="Previous"
             >
               <span className="material-symbols-outlined">chevron_left</span>
             </button>
             <button
               onClick={() => scroll("right")}
-              className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/80 border border-[#0F2A1E]/10 items-center justify-center text-[#0F2A1E] hover:bg-[#0F2A1E] hover:text-white transition-all shadow-md"
+              className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-surface-container-low border border-white/10 items-center justify-center text-white hover:bg-primary-container hover:text-on-primary-container transition-all"
               aria-label="Next"
             >
               <span className="material-symbols-outlined">chevron_right</span>
             </button>
 
-            <p className="md:hidden text-[#0F2A1E]/50 text-xs font-label uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+            <p className="md:hidden text-on-surface-variant/50 text-xs font-label uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
               Swipe to explore
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </p>
@@ -104,36 +103,28 @@ export default function TeamPage() {
               {TEAM.map((member, i) => (
                 <div
                   key={i}
-                  className="flex-none w-[85vw] md:w-[560px] snap-center bg-white/80 backdrop-blur-md border border-white/60 rounded-xl overflow-hidden shadow-xl"
+                  className="flex-none w-[85vw] md:w-[560px] snap-center bg-surface-container-low/80 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
                 >
-                  {/* Photo */}
                   <div className="w-full aspect-[4/3] overflow-hidden">
                     {member.img && !member.img.startsWith("REPLACE") ? (
-                      <img
-                        src={member.img}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-[#c8ddd0] to-[#e8f2ec] flex items-center justify-center">
-                        <span className="material-symbols-outlined text-[#0F2A1E]/20" style={{ fontSize: "6rem" }}>person</span>
+                      <div className="w-full h-full bg-gradient-to-br from-[#0F2A1E] to-[#1a3d2b] flex items-center justify-center">
+                        <span className="material-symbols-outlined text-primary-container/30" style={{ fontSize: "6rem" }}>person</span>
                       </div>
                     )}
                   </div>
 
-                  {/* Content */}
                   <div className="p-8 md:p-10">
-                    <div className="text-[#0F2A1E] font-label text-xs uppercase tracking-[0.2em] mb-2 font-bold opacity-60">{member.role}</div>
-                    <h2 className="font-display text-2xl md:text-3xl font-bold text-[#0F2A1E] mb-6">{member.name}</h2>
-
-                    <div className="space-y-4 text-[#0F2A1E]/75 text-sm leading-relaxed">
+                    <div className="text-primary-container font-label text-xs uppercase tracking-[0.2em] mb-2 font-bold">{member.role}</div>
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-6">{member.name}</h2>
+                    <div className="space-y-4 text-white/75 text-sm leading-relaxed">
                       {member.bio.map((p, j) => <p key={j}>{p}</p>)}
                     </div>
-
                     {member.extra && (
-                      <div className="mt-8 pt-8 border-t border-[#0F2A1E]/10">
-                        <h3 className="font-display text-lg font-bold text-[#0F2A1E] mb-4 italic">{member.extra.heading}</h3>
-                        <p className="text-[#0F2A1E]/70 text-sm leading-relaxed">{member.extra.body}</p>
+                      <div className="mt-8 pt-8 border-t border-white/10">
+                        <h3 className="font-display text-lg font-bold text-primary-container mb-4 italic">{member.extra.heading}</h3>
+                        <p className="text-white/75 text-sm leading-relaxed">{member.extra.body}</p>
                       </div>
                     )}
                   </div>
