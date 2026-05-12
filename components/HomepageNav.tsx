@@ -82,6 +82,7 @@ export default function HomepageNav() {
           <div className="hidden md:flex items-center justify-center gap-12">
             {[
               { label: "What We Do", href: "/advisory" },
+              { label: "Our Team", href: "/team" },
               { label: "Sectors", href: "/#sectors" },
               { label: "Articles", href: "/blog" },
             ].map(({ label, href }) => (
