@@ -18,11 +18,17 @@ const TEAM = [
     },
   },
   {
-    name: "Team Member",
-    role: "Coming Soon",
-    img: "",
-    bio: ["More team members coming soon."],
-    extra: null,
+    name: "Brad Howard",
+    role: "Growth Partner — North America & Europe",
+    img: "https://res.cloudinary.com/dp7duapaz/image/upload/q_auto/f_auto/v1778630508/WhatsApp_Image_2026-05-12_at_10.36.03_nlgzmb.jpg",
+    bio: [
+      "My work sits at the intersection of growth, market expansion and go-to-market execution. Across SaaS, services and emerging technology businesses, I have helped companies think through how they reach new customers, enter new markets and build the commercial systems required to scale.",
+      "I have been part of teams that went public, Forbes Fast 50 scale-ups and category-leading software environments, including HubSpot, where I consulted CEOs and founders on how to build revenue systems to scale their businesses. At Sinistar I led growth, leading expansion across North America and today I work closely with various teams to engineer go-to-market systems.",
+    ],
+    extra: {
+      heading: "My role at Jenta",
+      body: "As a Growth Partner for North America and Europe, my role at Jenta is to identify ambitious companies with strong potential and connect them into the right advisory conversations. Many businesses are not short on ambition or product quality. They are often missing the right network, the right timing or the right partner to help unlock their next stage of growth.\n\nJenta sits at the intersection of founders, advisors, investors and operators. My focus is on expanding that ecosystem across North America and Europe by building trusted relationships with companies ready to grow, understanding what they need next and helping to make the right introductions that can move the business forward.",
+    },
   },
   {
     name: "Team Member",
