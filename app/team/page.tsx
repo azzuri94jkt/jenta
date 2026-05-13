@@ -8,14 +8,13 @@ const TEAM = [
   {
     name: "Sami Wareeth",
     role: "Founder",
-    img: "REPLACE_WITH_CLOUDINARY_URL",
+    img: "https://res.cloudinary.com/dp7duapaz/image/upload/q_auto/f_auto/v1778630412/Sami_1-22_1_2_josuvg.jpg",
     bio: [
-      "I have spent the last eight-plus years as a technical recruiter, placing critical roles into SaaS, hardware and emerging tech businesses across every stage of funding, from pre-seed through to Series D. Most recently I worked internally with leading eCommerce agency DotCollective, where I grew the team out by 40-plus hires and designed the talent engine alongside their HR processes.",
-      "I take the responsibility seriously, because the people you bring in either stretch or compress your runway. Outside of recruitment, I am deeply interconnected in the Australian scaleup ecosystem and I genuinely enjoy helping businesses grow, whether that be through hiring or through funding.",
+      "I have spent the last nine-plus years as a technical recruiter, placing critical roles into SaaS, hardware and emerging tech businesses across every stage of funding, from pre-seed through to Series D. I believe humans and capital are 2 sides of the same growth coin that will either ensure a company excels or stalls.",
     ],
     extra: {
       heading: "Why I built Jenta",
-      body: "I speak to a lot of founders, and a familiar pattern kept emerging. Many were not yet ready to hire because they were mid-raise. Previously I would close the conversation and circle back once the round had landed. However I wanted to add more value, so I started building out a network of capital advisories to bring into these conversations earlier. The result has been a stronger relationship with the founder and a more holistic view for everyone involved. Advisories now lean on me to understand how a team is comprised and where it needs strengthening, which gives investors a clearer picture of the business. After all, a business is nothing without its people, and capital and talent are two sides of the same growth coin.",
+      body: "I speak to a lot of founders, and a familiar pattern kept emerging. Many were not yet ready to hire because they were mid-raise. Previously I would close the conversation and circle back once the round had landed. However I wanted to add more value, so I started building out a network of capital advisories to bring into these conversations earlier.\n\nThe result has been a stronger relationship with the founder and a more holistic view for everyone involved. Advisories now lean on me to understand how a team is comprised and where it needs strengthening, which gives investors a clearer picture of the business.",
     },
   },
   {
@@ -124,7 +123,11 @@ export default function TeamPage() {
                     {member.extra && (
                       <div className="mt-8 pt-8 border-t border-white/10">
                         <h3 className="font-display text-lg font-bold text-primary-container mb-4 italic">{member.extra.heading}</h3>
-                        <p className="text-white/75 text-sm leading-relaxed">{member.extra.body}</p>
+                        <div className="space-y-4">
+                          {member.extra.body.split("\n\n").map((para, k) => (
+                            <p key={k} className="text-white/75 text-sm leading-relaxed">{para}</p>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
