@@ -10,7 +10,8 @@ const TEAM = [
     role: "Founder",
     img: "https://res.cloudinary.com/dp7duapaz/image/upload/q_auto/f_auto/v1778630412/Sami_1-22_1_2_josuvg.jpg",
     bio: [
-      "I have spent the last nine-plus years as a technical recruiter, placing critical roles into SaaS, hardware and emerging tech businesses across every stage of funding, from pre-seed through to Series D. I believe humans and capital are 2 sides of the same growth coin that will either ensure a company excels or stalls.",
+      "I have spent the last nine-plus years as a technical recruiter, placing critical roles into SaaS, hardware and emerging tech businesses across every stage of funding, from pre-seed through to Series D. I enjoy building community and run multiple meetups to bring the wider tech community together here in Melbourne.",
+      "I believe humans and capital are 2 sides of the same growth coin that will either ensure a company excels or stalls.",
     ],
     extra: {
       heading: "Why I built Jenta",
