@@ -32,11 +32,17 @@ const TEAM = [
     },
   },
   {
-    name: "Team Member",
-    role: "Coming Soon",
+    name: "Hamish Keenan",
+    role: "Growth Partner — Asia Pacific",
     img: "",
-    bio: ["More team members coming soon."],
-    extra: null,
+    bio: [
+      "Over ten years in the technology industry across APAC, I have worked with some of the region's leading SaaS and emerging tech businesses, including Remote, Culture Amp and Ansarada, in roles focused on business development, market expansion and enterprise sales.",
+      "Growing up in Indonesia and building my career across Australia has given me a natural fluency in how business is done across cultures, which matters when you are helping companies enter new markets.",
+    ],
+    extra: {
+      heading: "My role at Jenta",
+      body: "The founders I have met throughout my career rarely struggled with product. They struggled with access: to the right networks, the right capital conversations and the right partners at the right time. That is exactly where Jenta operates, and why I joined.\n\nMy focus is on connecting ambitious emerging technology companies to advisory conversations across the Asia Pacific region. I bring a commercial operator's perspective: I know what revenue growth looks like from the inside, and I know what a strong introduction can unlock.",
+    },
   },
 ];
 
