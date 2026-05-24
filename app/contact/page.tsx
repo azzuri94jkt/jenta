@@ -10,7 +10,7 @@ const FIELDS: Field[] = [
   { label: "Full name", id: "name", type: "text", required: true, placeholder: "Your name" },
   { label: "Email address", id: "email", type: "email", required: true, placeholder: "you@company.com" },
   { label: "LinkedIn profile", id: "linkedin", type: "url", required: false, placeholder: "linkedin.com/in/yourprofile" },
-  { label: "Business phone number", id: "phone", type: "tel", required: false, placeholder: "+61 4xx xxx xxx" },
+  { label: "Business Registration Number (ABN)", id: "phone", type: "text", required: false, placeholder: "e.g. 51 824 753 556" },
   { label: "Website (or description if in stealth)", id: "website", type: "text", required: false, placeholder: "yourcompany.com or a brief description" },
 ];
 
