@@ -3,7 +3,6 @@ import HomepageNav from "@/components/HomepageNav";
 import { HomepageFooter } from "@/components/Footer";
 import AdvisoryMaps from "@/components/AdvisoryMaps";
 import ScrollToTop from "@/components/ScrollToTop";
-import { POSTS } from "@/app/blog/page";
 
 const SECTORS = [
   { icon: "psychology", label: "AI & Robotics", desc: "Backing intelligent systems, from autonomous platforms to machine learning infrastructure." },
@@ -20,7 +19,6 @@ const PIPELINE = [
   { tag: "Series A Capital Raise", title: "Green Energy", desc: "Green Energy AI Data Centre actively raising for their Series A", icon: "eco" },
 ];
 
-const BLOG_POSTS = POSTS.slice(0, 4);
 
 export default function HomePage() {
   return (
@@ -169,29 +167,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Blog */}
-        <section className="py-32 px-8 bg-surface-container-lowest">
-          <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row gap-20">
-            <div className="lg:w-1/3">
-              <span className="font-label text-primary-container tracking-[0.3em] text-[10px] font-bold mb-6 uppercase block">The Journal</span>
-              <h2 className="font-headline text-5xl font-bold tracking-tighter text-white mb-10 leading-tight">Our <br /><span className="italic font-light">Blog.</span></h2>
-              <p className="text-white/80 mb-12 font-light">Deep-dive analysis into the intersection of technology, capital, and geopolitical shifts.</p>
-            </div>
-            <div className="lg:w-2/3 space-y-12">
-              {BLOG_POSTS.map(({ date, title, excerpt, slug }) => (
-                <Link key={slug} href={`/blog/${slug}`} className="group flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/10 hover:border-primary-container transition-colors">
-                  <div className="md:w-1/4">
-                    <p className="font-label text-outline text-[10px] tracking-widest uppercase font-bold">{date}</p>
-                  </div>
-                  <div className="md:w-3/4">
-                    <h3 className="font-headline text-3xl font-bold text-white group-hover:text-primary-container transition-colors mb-4 tracking-tighter">{title}</h3>
-                    <p className="text-on-surface-variant font-light line-clamp-2">{excerpt}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
 
       </main>
 

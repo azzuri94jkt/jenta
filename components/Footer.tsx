@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { label: "Our Team", href: "/team" },
   { label: "What We Do", href: "/advisory" },
   { label: "Sectors", href: "/#sectors" },
-  { label: "Articles", href: "/blog" },
 ];
 
 function SharedFooter() {

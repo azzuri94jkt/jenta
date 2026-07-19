@@ -40,7 +40,6 @@ export default function HomepageNav() {
             { label: "What We Do", href: "/advisory" },
             { label: "Our Team", href: "/team" },
             { label: "Sectors", href: "/#sectors" },
-            { label: "Articles", href: "/blog" },
           ].map(({ label, href }) => (
             <Link
               key={label}
@@ -84,8 +83,7 @@ export default function HomepageNav() {
               { label: "What We Do", href: "/advisory" },
               { label: "Our Team", href: "/team" },
               { label: "Sectors", href: "/#sectors" },
-              { label: "Articles", href: "/blog" },
-            ].map(({ label, href }) => (
+              ].map(({ label, href }) => (
               <Link
                 key={label}
                 href={href}
