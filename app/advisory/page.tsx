@@ -116,7 +116,7 @@ export default function AdvisoryPage() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                 {[
                   { n: "01", title: "We get to know your business.", body: "We take time to understand your stage, your sector, your ambitions and the markets you want to enter. No generic matchmaking." },
-                  { n: "02", title: "We make the right introduction.", body: "We introduce you to the advisory partner within our network best placed to support your raise or market entry. We do not charge you for this. Our fee is paid by the advisory." },
+                  { n: "02", title: "We make the right introduction.", body: "We introduce you to advisories within our network who work in your sector and stage of growth. We do not charge you for this. Our fee is paid by the advisory." },
                   { n: "03", title: "The advisory takes it from here.", body: "Once introduced, the advisory and your business conduct all due diligence, negotiations and commercial arrangements independently. Jenta steps back." },
                 ].map(({ n, title, body }) => (
                   <div
