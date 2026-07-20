@@ -41,7 +41,7 @@ export default function HomePage() {
                 Seeing <span className="italic font-light text-primary-container">Around</span> Corners.
               </h1>
               <p className="max-w-xl text-lg md:text-xl font-light leading-relaxed mb-10 text-white">
-                We connect growth-stage businesses with the right advisory partners to unlock new markets and strategic investment.
+                We connect growth-stage businesses with the relevant advisory partners to unlock new markets and strategic investment.
               </p>
             </div>
           </div>

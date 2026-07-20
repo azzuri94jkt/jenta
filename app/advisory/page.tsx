@@ -105,7 +105,7 @@ export default function AdvisoryPage() {
                 </span>
               </h1>
               <p className="mt-8 md:mt-10 font-body text-base md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                We connect growth-stage businesses with the right advisory partners to unlock new markets and strategic investment.
+                We connect growth-stage businesses with the relevant advisory partners to unlock new markets and strategic investment.
               </p>
             </div>
           </div>
