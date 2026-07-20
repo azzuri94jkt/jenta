@@ -30,7 +30,7 @@ const TEAM = [
     ],
     extra: {
       heading: "My role at Jenta",
-      body: "As a Growth Partner for North America and Europe, my role at Jenta is to identify ambitious companies with strong potential and connect them into the right advisory conversations. Many businesses are not short on ambition or product quality. They are often missing the right network, the right timing or the right partner to help unlock their next stage of growth.\n\nJenta sits at the intersection of founders, advisors, investors and operators. My focus is on expanding that ecosystem across North America and Europe by building trusted relationships with companies ready to grow, understanding what they need next and helping to make the right introductions that can move the business forward.",
+      body: "As a Growth Partner for North America and Europe, my role at Jenta is to identify ambitious companies with strong potential and connect them into relevant advisory conversations. Many businesses are not short on ambition or product quality. They are often missing the right network, the right timing or the right partner to help unlock their next stage of growth.\n\nJenta sits at the intersection of founders, advisors, investors and operators. My focus is on expanding that ecosystem across North America and Europe by building trusted relationships with companies ready to grow, understanding what they need next and helping to make introductions that can move the business forward.",
     },
   },
   {
