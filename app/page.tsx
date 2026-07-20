@@ -147,8 +147,7 @@ export default function HomePage() {
         <section className="py-32 px-8 bg-surface">
           <div className="max-w-screen-2xl mx-auto">
             <div className="mb-20 text-left">
-              <span className="font-label text-primary-container tracking-[0.3em] text-[10px] font-bold mb-4 uppercase block">Active Deal Flow</span>
-              <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-white">Current <span className="italic font-light">Pipeline.</span></h2>
+              <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter text-white">Projects we have connected <span className="italic font-light">advisories to.</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {PIPELINE.map(({ tag, title, desc, icon }) => (
