@@ -34,6 +34,7 @@ const TEAM = [
     },
   },
   {
+    hidden: true,
     name: "Hamish Keenan",
     role: "Growth Partner — Asia Pacific",
     linkedin: "https://www.linkedin.com/in/hamish-keenan-5194b352/",
@@ -115,7 +116,7 @@ export default function TeamPage() {
               ref={scrollRef}
               className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 carousel-container"
             >
-              {TEAM.map((member, i) => (
+              {TEAM.filter((member) => !member.hidden).map((member, i) => (
                 <div
                   key={i}
                   className="flex-none w-[85vw] md:w-[560px] snap-center bg-surface-container-low/80 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
