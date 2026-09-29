@@ -33,21 +33,6 @@ const TEAM = [
       body: "As a Growth Partner for North America and Europe, my role at Jenta is to identify ambitious companies with strong potential and connect them into relevant advisory conversations. Many businesses are not short on ambition or product quality. They are often missing the right network, the right timing or the right partner to help unlock their next stage of growth.\n\nJenta sits at the intersection of founders, advisors, investors and operators. My focus is on expanding that ecosystem across North America and Europe by building trusted relationships with companies ready to grow, understanding what they need next and helping to make introductions that can move the business forward.",
     },
   },
-  {
-    hidden: true,
-    name: "Hamish Keenan",
-    role: "Growth Partner — Asia Pacific",
-    linkedin: "https://www.linkedin.com/in/hamish-keenan-5194b352/",
-    img: "",
-    bio: [
-      "Over ten years in the technology industry across APAC, I have worked with some of the region's leading SaaS and emerging tech businesses, including Remote, Culture Amp and Ansarada, in roles focused on business development, market expansion and enterprise sales.",
-      "Growing up in Indonesia and building my career across Australia has given me a natural fluency in how business is done across cultures, which matters when you are helping companies enter new markets.",
-    ],
-    extra: {
-      heading: "My role at Jenta",
-      body: "The founders I have met throughout my career rarely struggled with product. They struggled with access: to the right networks, the right capital conversations and the right partners at the right time. That is exactly where Jenta operates, and why I joined.\n\nMy focus is on connecting ambitious emerging technology companies to advisory conversations across the Asia Pacific region. I bring a commercial operator's perspective: I know what revenue growth looks like from the inside, and I know what a strong introduction can unlock.",
-    },
-  },
 ];
 
 export default function TeamPage() {
@@ -116,7 +101,7 @@ export default function TeamPage() {
               ref={scrollRef}
               className="flex gap-8 overflow-x-auto snap-x snap-mandatory pb-4 carousel-container"
             >
-              {TEAM.filter((member) => !member.hidden).map((member, i) => (
+              {TEAM.map((member, i) => (
                 <div
                   key={i}
                   className="flex-none w-[85vw] md:w-[560px] snap-center bg-surface-container-low/80 backdrop-blur-md border border-white/5 rounded-xl overflow-hidden"
